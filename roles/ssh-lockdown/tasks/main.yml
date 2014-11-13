@@ -1,0 +1,8 @@
+---
+- name: ensure root is no longer allowed to login
+  lineinfile: >
+    dest=/etc/ssh/sshd_config
+    line="PermitRootLogin no"
+    state=present
+    validate="/usr/sbin/sshd -t"
+
