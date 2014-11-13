@@ -2,10 +2,10 @@
 - name: ensure root is no longer allowed to login
   template: >
     src=sshd_config.j2
-    dest=/etc/ssh/sshd_config
-    owner=root
-    group=root
-    mode=644
+    dest={{ sshd_config_file }}
+    owner={{ sshd_config_owner }}
+    group={{ sshd_config_group }}
+    mode={{ sshd_config_permissions }}
     validate="/usr/sbin/sshd -T -f %s"
   notify: restart ssh
 
