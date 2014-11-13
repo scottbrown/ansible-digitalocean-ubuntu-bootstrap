@@ -5,5 +5,5 @@ ansible_ssh_user: root
 # We are going to add the contents of this SSH public key file
 # to the operations account authorized key file.  Yes, this is
 # defaulting to YOUR SSH PUBLIC KEY FILE.
-my_ssh_public_key_file: "~/.ssh/id_rsa"
+my_ssh_public_key_file: "~/.ssh/id_rsa.pub"
 
