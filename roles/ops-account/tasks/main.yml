@@ -1,0 +1,16 @@
+---
+- name: ensure operations account exists
+  user: >
+    name={{ ops_account_username }}
+    createhome=yes
+    generate_ssh_key=yes
+    shell={{ ops_account_shell }}
+    state=present
+- name: ensure operations account has authorized_keys file
+  copy: >
+    content="{{ lookup('file', my_ssh_public_key_file) }}"
+    dest={{ ops_account_ssh_authorized_keys_file }}
+    owner={{ ops_account_username }}
+    group={{ ops_account_username }}
+    mode={{ ops_account_ssh_authorized_keys_permissions }}
+

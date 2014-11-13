@@ -1,0 +1,8 @@
+---
+ops_account_username: ops
+ops_account_shell: /bin/bash
+
+ops_account_ssh_dir: "/home/{{ ops_account_username }}/.ssh"
+ops_account_ssh_authorized_keys_file: "{{ ops_account_ssh_dir }}/authorized_keys"
+ops_account_ssh_authorized_keys_permissions: 600
+
