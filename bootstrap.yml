@@ -1,0 +1,7 @@
+---
+- name: Bootstrap DigitalOcean Servers
+  hosts: all
+  roles:
+    - ops-account
+    - ssh-lockdown
+
