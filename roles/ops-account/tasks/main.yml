@@ -16,9 +16,9 @@
 - name: add operations account to sudoers
   template: >
     src=sudoers.j2
-    dest=/etc/sudoers.d/operations_account
-    owner=root
-    group=root
-    mode=644
+    dest={{ ops_account_sudoers_file }}
+    owner={{ ops_account_sudoers_owner }}
+    group={{ ops_account_sudoers_group }}
+    mode={{ ops_account_sudoers_permissions }}
     validate="visudo -cf %s"
 

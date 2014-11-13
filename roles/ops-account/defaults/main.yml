@@ -6,3 +6,8 @@ ops_account_ssh_dir: "/home/{{ ops_account_username }}/.ssh"
 ops_account_ssh_authorized_keys_file: "{{ ops_account_ssh_dir }}/authorized_keys"
 ops_account_ssh_authorized_keys_permissions: 600
 
+ops_account_sudoers_file: /etc/sudoers.d/operations_account
+ops_account_sudoers_owner: root
+ops_account_sudoers_group: root
+ops_account_sudoers_permissions: 644
+
