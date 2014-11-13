@@ -1,0 +1,4 @@
+# Ignore every inventory file but the README
+inventories/*
+!inventories/README
+
