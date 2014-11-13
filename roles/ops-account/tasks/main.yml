@@ -13,4 +13,12 @@
     owner={{ ops_account_username }}
     group={{ ops_account_username }}
     mode={{ ops_account_ssh_authorized_keys_permissions }}
+- name: add operations account to sudoers
+  template: >
+    src=sudoers.j2
+    dest=/etc/sudoers.d/operations_account
+    owner=root
+    group=root
+    mode=644
+    validate="visudo -cf %s"
 
